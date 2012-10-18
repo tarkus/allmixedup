@@ -1,6 +1,6 @@
-# Web Components Made Easy
+# Be Careful, We've Been All Mixed Up
 
-I put all goodies here, only thing left was include them in proper way, below is a note
+put all goodies here, only thing left was include them in proper way, below is a note
 
 
 In main layout, there should be
