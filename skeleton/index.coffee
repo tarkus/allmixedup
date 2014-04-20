@@ -1,12 +1,12 @@
 Header     = @app.require 'module header'
+Home       = @app.require 'module home'
 Footer     = @app.require 'module footer'
 
 class Stage extends Spine.Stack
   className: "stage"
 
   controllers:
-    # Add Scenes here
-    main: Main
+    home: Home
 
   constructor: ->
     @el = $("<div/>").addClass(@className).appendTo($("body")) unless @el?
@@ -23,15 +23,11 @@ class APPNAME extends Spine.Controller
     super
 
     @header  = new Header
-    # Initialize other components here
 
     @append @header.render()
 
     @stage = new Stage
     @setStack @stage
-
-    # Append component views
-    @append @forgot.render()
 
     @stage.header = @header
 
@@ -39,7 +35,7 @@ class APPNAME extends Spine.Controller
 
     @routes
       "/*": =>
-        @stage.main.active()
+        @stage.dashboard.active()
 
 $ ->
   moment.lang("zh-cn") if moment
